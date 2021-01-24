@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/etxSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Wiki"/>
+    <Button
+        android:id="@+id/btnFetchData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etxSearch"
+        android:text="Enter"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/design_default_color_primary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFetchData"
+        android:layout_marginTop="-4dp">
+
+        <TextView
+            android:id="@+id/txtWikiData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wiki Data Shown Here"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <ProgressBar
+    android:id="@+id/progressbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:visibility="visible"/>
+
+</RelativeLayout>
